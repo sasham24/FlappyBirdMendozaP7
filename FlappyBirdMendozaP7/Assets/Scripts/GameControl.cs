@@ -1,15 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms.Impl;
-using UnityEngine.UI;
+
 
 public class GameControl : MonoBehaviour
 {
     public static GameControl Instance; 
     public GameObject gameOverText;
-    public Text scoreText;
+    public TextMeshProUGUI ScoreText;
+    
     public bool gameOver = false;
     public float scrollSpeed = -1.5f;
 
@@ -45,7 +47,7 @@ public class GameControl : MonoBehaviour
             return;
         }
         score++;
-        scoreText.text = "Score:" + score.ToString();
+        ScoreText.text = "Score:" + score.ToString();
     }
 
 
