@@ -48,6 +48,7 @@ public class GameControl : MonoBehaviour
         }
         score++;
         ScoreText.text = "Score:" + score.ToString();
+        GetComponent<AudioSource>().Play();
     }
 
 
